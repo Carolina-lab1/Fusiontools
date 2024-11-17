@@ -3,8 +3,9 @@
 
 body {
     background-color: #d8e2dce0;
-    ;
+    overflow-x: hidden;
     padding: 10px;
+    max-width: 100%;
 
 
 }
@@ -14,7 +15,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    max-width: 100%;
     height: 50px;
     margin: auto;
     padding-bottom: 10px;
@@ -27,7 +28,7 @@ body {
 }
 
 .logo p {
-    font-size: 17px;
+    font-size: 20px;
     font-family: 'silkscreen', Arial, sans-serif;
     display: flex;
     flex-direction: column-reverse;
@@ -48,9 +49,15 @@ body {
     background-color: #fff;
     border: none;
     color: black;
+    font-size: 15px;
     font-family: 'Noto Serif', sans-serif;
     font-style: normal;
     cursor: pointer;
+}
+
+.botoes button a {
+    color: black;
+    text-decoration: none;
 }
 
 .botoes .Home {
@@ -70,7 +77,7 @@ body {
 .botoes .Quem-somos {
     display: flex;
     justify-content: center;
-    width: 105px;
+    width: 100px;
     padding-right: 10px;
 }
 
@@ -110,17 +117,15 @@ section .one {
 }
 
 .one .container-esquerdo:first-child {
-    background-image: url(https://i.ibb.co/fdYWn0Q/Novo-Projeto-1.png);
+    background-image: url(https://i.ibb.co/X4qyXkv/image.png);
     background-color: #aac5b5de;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
-    padding-right: 10px;
     width: 62%;
     height: 100%;
-    margin: auto;
+    margin: 0;
 }
 
 .one .container-esquerdo:last-child {
@@ -194,12 +199,12 @@ section .one {
 }
 
 .two .container-esquerdo:last-child {
+    background: linear-gradient(#3c533e, #04420ab6);
+    background-image: url(https://i.ibb.co/ZVZW7pd/x.png);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
-    background-image: #fff;
     width: 80%;
     height: 60%;
     border-radius: 10px;
@@ -323,26 +328,26 @@ section .one {
     align-content: center;
     justify-content: space-evenly;
     align-items: center;
-    width: 70%;
+    width: 60%;
     padding-top: 40px;
 }
 
 .three .container-total .photos .photo-one{
     width: 200px;
     height: 200px;
-    background-color: #3c533e;
+
 }
 
 .three .container-total .photos .photo-two{
     width: 200px;
     height: 200px;
-    background-color: #3c533e;
+
 }
 
 .three .container-total .photos .photo-three{
     width: 200px;
     height: 200px;
-    background-color: #3c533e;
+
 }
 
 .four{
@@ -487,4 +492,101 @@ footer{
 .container-footer .info .copy .copyright{
     font-family: Arial, sans-serif;
     font-size: 13px;
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 5px;
+    }
+
+    #menu {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .logo {
+        padding-left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .botoes {
+        flex-direction: column;
+        width: 100%;
+        padding-right: 0;
+        gap: 5px;
+    }
+
+    .botoes button {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .one .container-esquerdo:first-child,
+    .one .container-esquerdo:last-child{
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .two{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .two .container-esquerdo:first-child,
+    .two .container-esquerdo:last-child,
+    .two .container-direito:last-child {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .three .container-total p{
+        text-align: center;
+    }
+
+    .three .container-total .photos {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .three .container-total .photos .photo-one,
+    .three .container-total .photos .photo-two,
+    .three .container-total .photos .photo-three {
+        width: 90%;
+    }
+
+    .four .container-form .form {
+        width: 90%;
+        height: auto;
+    }
+
+    .four .container-form .form input {
+        width: 90%;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    footer {
+
+        font-size: 12px;
+        padding: 10px 0;
+    }
+
+    .container-footer .info p {
+        font-size: 14px;
+    }
 }
